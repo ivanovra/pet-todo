@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Dropdown from "../Basic/Dropdown";
 
 export interface LayoutMenuCategoryProps {
   title?: string;
@@ -20,7 +20,7 @@ const Category = styled.div`
 
 const LayoutMenuCategory: React.ElementType<LayoutMenuCategoryProps> = (props) => {
   const { title } = props;
-  return <div></div>;
+  return <Dropdown></Dropdown>;
 };
 
 export default LayoutMenuCategory;
