@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { DownOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 interface LayoutMenuItemProps {
   isCategory?: boolean;
   title: string;
+  link?: string;
 }
-
 
 const Item = styled.div`
   display: flex;
@@ -18,8 +18,12 @@ const Item = styled.div`
 `;
 
 const LayoutMenuItem: React.FC<LayoutMenuItemProps> = (props) => {
-  const { isCategory, title } = props;
-  return (
+  const { isCategory, title, link } = props;
+  return link ? (
+    <Link to={link} className={"linkRouter"}>
+      <Item>{title}</Item>
+    </Link>
+  ) : (
     <Item>{title}</Item>
   );
 };

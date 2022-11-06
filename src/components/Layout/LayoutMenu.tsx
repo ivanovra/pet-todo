@@ -18,6 +18,8 @@ const Menu = styled.div`
   width: 300px;
 `;
 
+
+
 const LayoutMenu: React.FC<LayoutMenuProps> & Extensions = (props) => {
   const { children } = props;
   return <Menu>{children}</Menu>;
